@@ -16,24 +16,41 @@
 		<!-- actualizacion oaguillon -->
 	</head>
 	<body>
-		<div data-role="page" id="pagina1">
-			<div data-role="header">
+		<section data-role="page" id="login">
+			<header data-role="header">
 				<h3>Acceso</h3>
-			</div>
-				<div data-role="content">
+			</header>
+				<article data-role="content">
 					<form id="log-form" method="post" action="#">
 						<label for="log-user">Nombre</label>
 						<input type="text" name="log-user" id="d-name">
 						<label for="log-user">Clave</label>
 						<input type="password" name="log-pass" id="d-pass">
 						<input type="button" value="Get" id="log-btnget" data-theme="e">
-						<input type="button" value="Post" id="log-btnpost" data-theme="e">
+						<input type="button" value="Post" id="log-btnpost" data-theme="e" data-transition="slide">
 					</form>
-				</div>
+				</article>
+		</section>	
+		<section id="pageError" data-role="dialog">
+	        <header data-role="header">
+	            <h1>Error</h1>
+	        </header>
+	        <article data-role="content">
+	            <p>Usuario o contraseña no valida</p>
+	            <a href="#" data-role="button" data-rel="back">Aceptar</a>
+	        </article>
+    </section>
+		<section data-role="page" id="pagina2">
+			<header data-role="header">
+				<h3>Pagina 2</h3>
+			</header>
+				<article data-role="content">
+					
+				</article>
 			<div data-role="footer" data-position="fixed" data-theme="e">
-				<h3>Piecera</h3>
+				<h3> Piecera P2</h3>
 			</div>
-		</div>	
+		</section>	
 		<script src="js/main.js"></script>
 	</body>
 </html>
