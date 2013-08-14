@@ -28,7 +28,9 @@ m("#log-btnget").click(function(){
 
 m("#log-btnpost").click(function(){
 	var fdata = m("form#log-form").serialize();
-	var sending = m.post('http://sitiowebdeprueba.dx.am/phonegap/acceso.php',fdata); 
-	console.log(sending);
+	var sending = m.post('http://sitiowebdeprueba.dx.am/phonegap/acceso.php',fdata,function(data){
+		console.log(data);
+	}); 
+	
 });
 	
