@@ -18,9 +18,9 @@ m("#log-btnget").click(function(){
 					}
 				},
 				success: function(respuesta){
-					console.log(respuesta);
+					//console.log(respuesta);
 					m.each(respuesta,function(id,dt){
-						console.log(id +':'+dt);
+						//console.log(id +':'+dt);
 						m("#log-form").after(id +':'+dt+"</br>");
 					});
 				}
@@ -30,8 +30,8 @@ m("#log-btnget").click(function(){
 m("#log-btnpost").click(function(){
 	var fdata = m("form#log-form").serialize();
 	var sending = m.post('http://sitiowebdeprueba.dx.am/phonegap/acceso.php',fdata,function(data){
-		console.log(data);
-		if (sending=="f") {
+		//console.log(data);
+		if (sending) {
 			m.mobile.changePage("#pagina2",{transition:'slide'});
 		}else{
 			m.mobile.changePage("#pageError",{transition:'pop'});
